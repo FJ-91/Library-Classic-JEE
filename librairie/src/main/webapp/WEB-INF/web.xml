@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	      xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	      version="3.0">
+	
+	<display-name>Home</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>authors</servlet-name>
+		<servlet-class>fr.afpa.library.servlets.authorServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>catalogues</servlet-name>
+		<servlet-class>fr.afpa.library.servlets.catServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>books</servlet-name>
+		<servlet-class>fr.afpa.library.servlets.bookServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>copies</servlet-name>
+		<servlet-class>fr.afpa.library.servlets.copiesServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>subs</servlet-name>
+		<servlet-class>fr.afpa.library.servlets.subServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>borrowings</servlet-name>
+		<servlet-class>fr.afpa.library.servlets.borrowingServlet</servlet-class>
+	</servlet>
+
+	<!-- ******Servlets Mapping****** -->
+	<servlet-mapping>
+		<servlet-name>authors</servlet-name>
+		<url-pattern>/authors</url-pattern>
+		<url-pattern>/addAuthor</url-pattern>
+		<url-pattern>/deleteAuthor</url-pattern>
+		<url-pattern>/editAuthor</url-pattern>
+		<url-pattern>/editAuthorForm</url-pattern>
+		<url-pattern>/authorDetails</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>catalogues</servlet-name>
+		<url-pattern>/catalogues</url-pattern>
+		<url-pattern>/addCat</url-pattern>
+		<url-pattern>/deleteCat</url-pattern>
+		<url-pattern>/editCat</url-pattern>
+		<url-pattern>/editCatForm</url-pattern>
+		<url-pattern>/catDetails</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>books</servlet-name>
+		<url-pattern>/books</url-pattern>
+		<url-pattern>/addBook</url-pattern>
+		<url-pattern>/deleteBook</url-pattern>
+		<url-pattern>/editBook</url-pattern>
+		<url-pattern>/editBookForm</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>copies</servlet-name>
+		<url-pattern>/copies</url-pattern>
+		<url-pattern>/addCopies</url-pattern>
+		<url-pattern>/deleteCopy</url-pattern>
+		<url-pattern>/repairCopy</url-pattern>
+		<url-pattern>/sendRepair</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>subs</servlet-name>
+		<url-pattern>/subs</url-pattern>
+		<url-pattern>/addSub</url-pattern>
+		<url-pattern>/deleteSub</url-pattern>
+		<url-pattern>/editSub</url-pattern>
+		<url-pattern>/editSubForm</url-pattern>
+		<url-pattern>/subDetails</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>borrowings</servlet-name>
+		<url-pattern>/borrowings</url-pattern>
+		<url-pattern>/createBorrowing</url-pattern>
+		<url-pattern>/deleteBor</url-pattern>
+		<url-pattern>/editBor</url-pattern>
+		<url-pattern>/editBorForm</url-pattern>
+		<url-pattern>/returnCopy</url-pattern>
+	</servlet-mapping>
+</web-app>

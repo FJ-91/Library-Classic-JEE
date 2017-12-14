@@ -14,7 +14,7 @@
 
 	<%@ include file="/WEB-INF/views/header.jsp"%>
 	<div id="containerHome">
-		<h1 style="color: white;">Welcome</h1>
+		<h1 style="color: white;">Welcome to my first ever Java EE project !</h1>
 	</div>
 
 	<%@ include file="/WEB-INF/views/footer.jsp"%>

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import fr.afpa.library.dao.DaoBook;
 import fr.afpa.library.dao.DaoCopy;
 import fr.afpa.library.model.Copy;
 import fr.afpa.library.service.IServiceCopy;
@@ -18,13 +19,15 @@ import fr.afpa.library.service.ServiceCopy;
  * Servlet implementation class copiesServlet
  */
 public class copiesServlet extends HttpServlet {
+	
 private static final long serialVersionUID = 1L;
 	
-	IServiceCopy service;
+	private IServiceCopy service;
 
 	public void init() throws ServletException {
-		DaoCopy dao = new DaoCopy();
-		this.service = new ServiceCopy(dao);
+		DaoCopy daoC = new DaoCopy();
+		DaoBook daoB = new DaoBook();
+		this.service = new ServiceCopy(daoC, daoB);
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

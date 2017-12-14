@@ -7,7 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import fr.afpa.library.dao.DaoAuthors;
 import fr.afpa.library.dao.DaoBook;
+import fr.afpa.library.dao.DaoCat;
 import fr.afpa.library.dao.DuplicateException;
 import fr.afpa.library.model.Author;
 import fr.afpa.library.model.Book;
@@ -23,8 +25,10 @@ public class bookServlet extends HttpServlet {
 	private IServiceBook serviceBook;
 
 	public void init() throws ServletException {
-		DaoBook dao = new DaoBook();
-		serviceBook = new ServiceBook(dao);
+		DaoBook daoB = new DaoBook();
+		DaoAuthors daoA = new DaoAuthors();
+		DaoCat daoC = new DaoCat();
+		serviceBook = new ServiceBook(daoB, daoA, daoC);
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

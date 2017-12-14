@@ -57,7 +57,6 @@ public class authorServlet extends HttpServlet {
 		  		showAuthorsPanel(request, response);
 		  		break;
 		}
-		
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

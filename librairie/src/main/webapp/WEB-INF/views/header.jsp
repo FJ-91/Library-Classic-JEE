@@ -23,7 +23,7 @@
 	<ul style="background-color: #a09e9e;">
 		<li><img><a href="/librairie"><img src="https://png.icons8.com/library/ios7/32" width="32" height="32" style="margin-right : 5px;"><b>Home</b></a></li>
 		<li><a href="/librairie/authors"><img src="https://png.icons8.com/edgar-allan-poe/ios7/32" width="32" height="32" style="margin-right : 5px;"><b>Authors</b></a></li>
-		<li><a href="/librairie/catalogues"><img src="https://png.icons8.com/magazine/ios7/32" width="32" height="32" style="margin-right : 5px;"><b>Catalogues</b></a></li>
+		<li><a href="/librairie/catalogues"><img src="https://png.icons8.com/magazine-filled/ios7/32/" width="32" height="32" style="margin-right : 5px;"><b>Catalogues</b></a></li>
 		<li><a href="/librairie/books"><img src="https://png.icons8.com/book-stack/ios7/32" width="32" height="32" style="margin-right : 5px;"><b>Books</b></a></li>
 		<li><a href="/librairie/copies"><img src="https://png.icons8.com/book-shelf/ios7/32" width="32" height="32" style="margin-right : 5px;"><b>Copies</b></a></li>
 		<li><a href="/librairie/subs"><img src="https://png.icons8.com/reading/ios7/32" width="32" height="32" style="margin-right : 5px;"><b>Subscribers</b></a></li>

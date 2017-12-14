@@ -2,10 +2,10 @@ package fr.afpa.library.service;
 
 import java.util.List;
 
-import fr.afpa.library.dao.DaoAuthors;
-import fr.afpa.library.dao.DaoCat;
 import fr.afpa.library.dao.DuplicateException;
+import fr.afpa.library.dao.IDaoAuthors;
 import fr.afpa.library.dao.IDaoBook;
+import fr.afpa.library.dao.IDaoCat;
 import fr.afpa.library.model.Author;
 import fr.afpa.library.model.Book;
 import fr.afpa.library.model.Catalogue;
@@ -13,11 +13,13 @@ import fr.afpa.library.model.Catalogue;
 public class ServiceBook implements IServiceBook {
 	
 	private IDaoBook daoBook;
-	private DaoAuthors daoAuthors = new DaoAuthors();
-	private DaoCat daoCat = new DaoCat();
+	private IDaoAuthors daoAuthors;
+	private IDaoCat daoCat;
 	
-	public ServiceBook(IDaoBook daoBook) {
+	public ServiceBook(IDaoBook daoBook, IDaoAuthors daoAuthors, IDaoCat daoCat) {
 		this.daoBook = daoBook;
+		this.daoAuthors = daoAuthors;
+		this.daoCat = daoCat;
 	}
 
 	@Override

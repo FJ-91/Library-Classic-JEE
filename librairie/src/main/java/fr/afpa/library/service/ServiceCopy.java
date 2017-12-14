@@ -2,7 +2,7 @@ package fr.afpa.library.service;
 
 import java.util.List;
 
-import fr.afpa.library.dao.DaoBook;
+import fr.afpa.library.dao.IDaoBook;
 import fr.afpa.library.dao.IDaoCopy;
 import fr.afpa.library.model.Book;
 import fr.afpa.library.model.Copy;
@@ -10,10 +10,11 @@ import fr.afpa.library.model.Copy;
 public class ServiceCopy implements IServiceCopy {
 	
 	private IDaoCopy daoCopy;
-	private DaoBook daoBook = new DaoBook();
+	private IDaoBook daoBook;
 	
-	public ServiceCopy(IDaoCopy DaoCopy) {
+	public ServiceCopy(IDaoCopy DaoCopy, IDaoBook DaoBook) {
 		daoCopy = DaoCopy;
+		daoBook = DaoBook;
 	}
 
 	@Override
